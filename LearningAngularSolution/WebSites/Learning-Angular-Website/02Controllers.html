@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html ng-app="githubViewer">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0-rc.2/angular.min.js"></script>
+</head>
+<body>
+    <div ng-controller="MainController">
+        <p>{{message}}</p>
+        <p>Message length: {{message.length}}</p>
+        <h1>Person</h1>
+        <div>
+            <div>First name: {{person.firstName}}</div>
+            <div>Last name: {{person.lastName}}</div>
+            <div>
+                <img ng-src="{{person.imageSrc}}" title="{{person.firstName}} {{person.lastName}}" />
+            </div>
+        </div>
+        <h1>Github User</h1>
+        <div>
+            <div>{{ error }}</div>
+            <div>User name: {{user.name}}</div>
+            <div>Location: {{user.location}}</div>
+            <div>
+                <img ng-src="{{user.avatar_url}}" title="{{person.name}}" />
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/02Controllers.js"></script>
+</body>
+</html>
